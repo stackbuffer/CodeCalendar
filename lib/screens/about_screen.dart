@@ -43,7 +43,7 @@ class _AboutPageState extends State<AboutPage> {
           Divider(color:Color(0xff006400), thickness: 1.0),
 
           Text(
-            "Libraries used:                ",
+            "Libraries used:",
             style: TextStyle(fontSize: 20.0, fontFamily: "monospace", color: Color(0xff006400)), 
             textAlign: TextAlign.start
           ),
@@ -51,7 +51,7 @@ class _AboutPageState extends State<AboutPage> {
           Padding(padding: EdgeInsets.only(top: 8.0)),
           
           Text(
-            "Flutter SDK\ncupertino_icons: ^1.0.2\nhttp: ^0.13.4\nurl_launcher: ^6.0.20\nintl: ^0.17.0\nadd_2_calendar: ^2.1.3\nanimated_splash_screen: ^1.2.0                     ",
+            "Flutter SDK\ncupertino_icons: ^1.0.2\nhttp: ^0.13.4\nurl_launcher: ^6.0.20\nintl: ^0.17.0\nadd_2_calendar: ^2.1.3\nanimated_splash_screen: ^1.2.0",
             style: TextStyle(fontSize: 14.0, fontFamily: "monospace")
           ),
           
