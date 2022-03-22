@@ -26,7 +26,7 @@ class _AboutPageState extends State<AboutPage> {
       ),
 
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(padding: EdgeInsets.only(top:12.0)),
 
@@ -42,17 +42,23 @@ class _AboutPageState extends State<AboutPage> {
 
           Divider(color:Color(0xff006400), thickness: 1.0),
 
-          Text(
-            "Libraries used:",
-            style: TextStyle(fontSize: 20.0, fontFamily: "monospace", color: Color(0xff006400)), 
-            textAlign: TextAlign.start
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Libraries used:",
+              style: TextStyle(fontSize: 20.0, fontFamily: "monospace", color: Color(0xff006400)), 
+              textAlign: TextAlign.start
+            ),
           ),
           
-          Padding(padding: EdgeInsets.only(top: 8.0)),
+          Padding(padding: EdgeInsets.only(top: 2.0)),
           
-          Text(
-            "Flutter SDK\ncupertino_icons: ^1.0.2\nhttp: ^0.13.4\nurl_launcher: ^6.0.20\nintl: ^0.17.0\nadd_2_calendar: ^2.1.3\nanimated_splash_screen: ^1.2.0",
-            style: TextStyle(fontSize: 14.0, fontFamily: "monospace")
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Flutter SDK\ncupertino_icons: ^1.0.2\nhttp: ^0.13.4\nurl_launcher: ^6.0.20\nintl: ^0.17.0\nadd_2_calendar: ^2.1.3\nanimated_splash_screen: ^1.2.0",
+              style: TextStyle(fontSize: 14.0, fontFamily: "monospace")
+            ),
           ),
           
 
@@ -61,49 +67,62 @@ class _AboutPageState extends State<AboutPage> {
           Divider(color:Color(0xff006400), thickness: 1.0),
 
           
-          InkWell(
-            child: Text(
-              "stackbuffer on GitHub", 
-              style: TextStyle(
-                color: Colors.green, 
-                fontSize: 16.0, 
-                fontFamily: "monospace",
-                decoration: TextDecoration.underline
-              )
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xff556B2F)
+                    ),
+                    onPressed: (){
+                      launchUrl("https://play.google.com/store/apps/developer?id=stackbuffer");
+                    },
+                    child: Text("More Apps?", style: TextStyle(fontFamily: "monospace"))
+                  ),
+
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xff556B2F)
+                    ),
+                    onPressed: (){
+                      launchUrl("https://stackbuffer.github.io/donate");
+                    },
+                    child: Text("Donate", style: TextStyle(fontFamily: "monospace"))
+                  ),
+                ],
+              ),
+
               
-            ),
+              Padding(padding: EdgeInsets.only(top:12.0)),
 
-            onTap: (){
-              launchUrl("https://github.com/stackbuffer");
-            },
-          ),
-          
-          Padding(padding: EdgeInsets.only(top:12.0)),
+              InkWell(
+                child: Text(
+                  "This app is open-source", 
+                  style: TextStyle(
+                    color: Colors.blue, 
+                    fontSize: 16.0, 
+                    fontFamily: "monospace",
+                    decoration: TextDecoration.underline
+                  ),
+                  textAlign: TextAlign.center,
+                ),
 
-        
-          InkWell(
-            child: Text(
-              "Tap here to check out my other apps.",
-              style: TextStyle(
-                fontFamily: "monospace", 
-                color: Colors.blue,
-                fontSize: 18.0,
-                decoration: TextDecoration.underline
-              ), 
-              textAlign: TextAlign.center
-            ),
+                onTap: (){
+                  launchUrl("https://github.com/stackbuffer/CodeCalendar");
+                },
+              ),
 
-            onTap: (){
-              launchUrl("https://play.google.com/store/apps/developer?id=stackbuffer");
-            }
-
+                  
+              Padding(padding: EdgeInsets.only(top:12.0)),
+              
+              Text("Powered by https://www.kontests.net/api", style: TextStyle(color: Colors.black, fontSize: 14.0, fontFamily: "monospace")),
+            ],
           ),
 
-          Padding(padding: EdgeInsets.only(top:12.0)),
-
-          Spacer(),
-          
-          Text("Powered by https://www.kontests.net/api", style: TextStyle(color: Colors.black, fontSize: 14.0, fontFamily: "monospace")),
         
           Spacer(),
 

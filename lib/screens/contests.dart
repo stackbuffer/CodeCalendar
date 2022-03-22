@@ -39,7 +39,7 @@ class _ContestTabState extends State<ContestTab> with AutomaticKeepAliveClientMi
             var jsonData = jsonDecode(snapshot.data);
 
             if(jsonData.length == 0){
-              return const Center(child: Text("No contests!", style: TextStyle(fontSize: 18.0)));
+              return const Center(child: Text("No contests!", style: TextStyle(fontSize: 18.0, fontFamily: "monospace")));
             }
 
             return ListView.builder(
