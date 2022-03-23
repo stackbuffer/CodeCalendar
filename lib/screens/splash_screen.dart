@@ -1,3 +1,4 @@
+import 'package:codecalendar/util/colors.dart';
 import 'package:flutter/material.dart';
 import 'homepage_screen.dart';
 //splash screen import
@@ -16,7 +17,7 @@ class SplashScreenState extends State<SplashScreen>{
       splash: SplashContainer(),
       nextScreen: HomePage(),
       splashTransition: SplashTransition.fadeTransition,
-      backgroundColor: Color(0xffFEF8EF),
+      backgroundColor: creamyWhite,
     );
   }
 }

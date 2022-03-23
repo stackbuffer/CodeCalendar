@@ -1,3 +1,4 @@
+import 'package:codecalendar/util/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -65,10 +66,6 @@ class _ContestCardState extends State<ContestCard> {
   @override
   Widget build(BuildContext context) {
     
-    Color buttonColor = Color(0xff556B2F);
-    
-    Color dividerColor = Color(0xff556B2F);
-    
     var jsonData = widget.jsonData;
     var duration = convertToHours(jsonData["duration"]);
 
@@ -98,7 +95,7 @@ class _ContestCardState extends State<ContestCard> {
 
     return Card(
 
-      color: Color(0xffFEF8EF),
+      color: creamyWhite,
 
       elevation: 2.0,
 
@@ -120,23 +117,23 @@ class _ContestCardState extends State<ContestCard> {
           
           const Padding(padding: EdgeInsets.only(top: 8.0)),
 
-          Divider(color: dividerColor, thickness: 2.0, indent: 40, endIndent: 40),
+          Divider(color: customGreen, thickness: 2.0, indent: 40, endIndent: 40),
 
           //start and end dates
           Text("Start: ${startContest[0]}, Time: ${startContest[1]}", style: const TextStyle(fontSize: 14.0, fontFamily: "monospace")),
           Text("End: ${endContest[0]}, Time: ${endContest[1]}", style: const TextStyle(fontSize: 14.0, fontFamily: "monospace")),
           
-          Divider(color: dividerColor, thickness: 2.0, indent: 40, endIndent: 40),
+          Divider(color: customGreen, thickness: 2.0, indent: 40, endIndent: 40),
           
 
           const Padding(padding: EdgeInsets.only(top: 8.0)),
           
           Text("Total duration: ${duration[0]} hrs ${duration[1]} mins", style: const TextStyle(fontSize: 14.0, fontFamily: "monospace")),
           Padding(padding: EdgeInsets.only(top: 6.0)),
-          Text("Status: $status", style: const TextStyle(color: Color(0xff006400), fontSize: 16.0, fontFamily: "monospace")),
+          Text("Status: $status", style: const TextStyle(color: customDarkGreen, fontSize: 16.0, fontFamily: "monospace")),
 
           
-          Divider(color: dividerColor, thickness: 2.0),
+          Divider(color: customGreen, thickness: 2.0),
 
           //space buttons evenly
           Row(
@@ -144,7 +141,7 @@ class _ContestCardState extends State<ContestCard> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: buttonColor,
+                    primary: customGreen,
                 ),
                 
                 onPressed: () => launchUrl(jsonData["url"]),
@@ -154,7 +151,7 @@ class _ContestCardState extends State<ContestCard> {
               //add to calendar
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: buttonColor,
+                    primary: customGreen,
                 ),
                 
                 onPressed: () => addToCalendar(jsonData["name"], start_local, end_local),

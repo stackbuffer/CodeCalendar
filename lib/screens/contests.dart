@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:codecalendar/util/colors.dart';
 import 'package:codecalendar/widgets/contest_card.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -33,7 +34,7 @@ class _ContestTabState extends State<ContestTab> with AutomaticKeepAliveClientMi
         future: getContestDetails(),
         builder: (BuildContext context, AsyncSnapshot snapshot){
           if(snapshot.data == null){
-            return const Center(child: CircularProgressIndicator(color: Color(0xff556B2F)));
+            return const Center(child: CircularProgressIndicator(color: customGreen));
           }
           else{
             var jsonData = jsonDecode(snapshot.data);

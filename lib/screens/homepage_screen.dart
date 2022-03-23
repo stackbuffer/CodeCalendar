@@ -1,5 +1,6 @@
 import 'package:codecalendar/screens/about_screen.dart';
 import 'package:codecalendar/screens/contests.dart';
+import 'package:codecalendar/util/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -34,20 +35,20 @@ class _HomePageState extends State<HomePage> {
       length: 10,
       
       child: Scaffold(
-        backgroundColor: Color(0xffFEF8EF),
+        backgroundColor: creamyWhite,
 
         //app bar
         appBar: AppBar(
           title: const Text("Code Calendar", style: TextStyle(color: Colors.black, fontFamily: "monospace", fontWeight: FontWeight.bold)),
           
-          backgroundColor: Color(0xffFEF8EF),
+          backgroundColor: creamyWhite,
 
           actions: [
             PopupMenuButton<String>(
               
               icon: Icon(Icons.more_vert, color: Colors.black),
 
-              color: Color(0xffFEF8EF),
+              color: creamyWhite,
               onSelected: handleClick,
               itemBuilder: (BuildContext context){
                 return {'About', 'Privacy Policy'}.map((String choice) {
@@ -63,7 +64,7 @@ class _HomePageState extends State<HomePage> {
           bottom: const TabBar(
             isScrollable: true,
             labelColor: Colors.black,
-            indicatorColor: Color(0xff556B2F),
+            indicatorColor: customGreen,
             indicatorSize: TabBarIndicatorSize.label,
             labelStyle: TextStyle(fontWeight: FontWeight.bold, fontFamily: "monospace"),
             tabs: [

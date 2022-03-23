@@ -1,3 +1,4 @@
+import 'package:codecalendar/util/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -17,10 +18,10 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFEF8EF),
+      backgroundColor: creamyWhite,
       appBar: AppBar(
         title: Text("About", style: TextStyle(color: Colors.black, fontFamily: "monospace", fontWeight: FontWeight.bold)), 
-        backgroundColor: Color(0xffFEF8EF),
+        backgroundColor: creamyWhite,
 
         iconTheme: IconThemeData(color: Colors.black),  
       ),
@@ -40,13 +41,13 @@ class _AboutPageState extends State<AboutPage> {
 
           Padding(padding: EdgeInsets.only(top: 10.0)),
 
-          Divider(color:Color(0xff006400), thickness: 1.0),
+          Divider(color:customDarkGreen, thickness: 1.0),
 
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
               "Libraries used:",
-              style: TextStyle(fontSize: 20.0, fontFamily: "monospace", color: Color(0xff006400)), 
+              style: TextStyle(fontSize: 20.0, fontFamily: "monospace", color: customDarkGreen), 
               textAlign: TextAlign.start
             ),
           ),
@@ -64,7 +65,7 @@ class _AboutPageState extends State<AboutPage> {
 
           Padding(padding: EdgeInsets.only(top:12.0)),
           
-          Divider(color:Color(0xff006400), thickness: 1.0),
+          Divider(color:customDarkGreen, thickness: 1.0),
 
           
           Column(
@@ -76,7 +77,7 @@ class _AboutPageState extends State<AboutPage> {
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xff556B2F)
+                      primary: someRandomOliveGreen
                     ),
                     onPressed: (){
                       launchUrl("https://play.google.com/store/apps/developer?id=stackbuffer");
@@ -86,7 +87,7 @@ class _AboutPageState extends State<AboutPage> {
 
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xff556B2F)
+                      primary: someRandomOliveGreen
                     ),
                     onPressed: (){
                       launchUrl("https://stackbuffer.github.io/donate");
