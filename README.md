@@ -12,4 +12,11 @@ Install Flutter SDK throught Android Studio and then run the following commands
 
 `flutter run` to run the debug version on yout device
 
+
+Here's a screenshot
+
+![screenshot](https://github.com/stackbuffer/CodeCalendar/blob/main/banner.jpg)
+
+
+
 Feel free to implement new features and contribute back to this project
