@@ -34,13 +34,13 @@ class _ContestTabState extends State<ContestTab> with AutomaticKeepAliveClientMi
         future: getContestDetails(),
         builder: (BuildContext context, AsyncSnapshot snapshot){
           if(snapshot.data == null){
-            return const Center(child: CircularProgressIndicator(color: customGreen));
+            return const Center(child: CircularProgressIndicator(color: dropBlue));
           }
           else{
             var jsonData = jsonDecode(snapshot.data);
 
             if(jsonData.length == 0){
-              return const Center(child: Text("No contests!", style: TextStyle(fontSize: 18.0, fontFamily: "monospace")));
+              return const Center(child: Text("No contests!", style: TextStyle(color: Colors.white, fontSize: 18.0, fontFamily: "monospace")));
             }
 
             return ListView.builder(

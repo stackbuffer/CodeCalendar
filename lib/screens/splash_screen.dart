@@ -17,7 +17,7 @@ class SplashScreenState extends State<SplashScreen>{
       splash: SplashContainer(),
       nextScreen: HomePage(),
       splashTransition: SplashTransition.fadeTransition,
-      backgroundColor: creamyWhite,
+      backgroundColor: dropBlack,
     );
   }
 }
@@ -29,16 +29,16 @@ class SplashContainer extends StatelessWidget {
       child: Center(
         child: Column(
           children: [
-            Text("Code Calendar by stackbuffer", style: TextStyle(fontWeight: FontWeight.bold, fontFamily: "monospace")),
+            Text("Code Calendar by stackbuffer", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: "monospace")),
             
             Padding(padding: EdgeInsets.only(top: 3)),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Made with ", style: TextStyle(fontFamily: "monospace")),
+                Text("Made with ", style: TextStyle(color: Colors.white, fontFamily: "monospace")),
                 Icon(Icons.favorite, color: Colors.red),
-                Text(" in India!", style: TextStyle(fontFamily: "monospace"))
+                Text(" in India!", style: TextStyle(color: Colors.white, fontFamily: "monospace"))
               ],
             ),
           ],

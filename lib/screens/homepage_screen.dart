@@ -35,26 +35,26 @@ class _HomePageState extends State<HomePage> {
       length: 10,
       
       child: Scaffold(
-        backgroundColor: creamyWhite,
+        backgroundColor: dropBlack,
 
         //app bar
         appBar: AppBar(
-          title: const Text("Code Calendar", style: TextStyle(color: Colors.black, fontFamily: "monospace", fontWeight: FontWeight.bold)),
+          title: const Text("Code Calendar", style: TextStyle(color: Colors.white, fontFamily: "monospace", fontWeight: FontWeight.bold)),
           
-          backgroundColor: creamyWhite,
+          backgroundColor: dropBlack20,
 
           actions: [
             PopupMenuButton<String>(
               
-              icon: Icon(Icons.more_vert, color: Colors.black),
+              icon: Icon(Icons.more_vert, color: Colors.white),
 
-              color: creamyWhite,
+              color: dropBlack,
               onSelected: handleClick,
               itemBuilder: (BuildContext context){
                 return {'About', 'Privacy Policy'}.map((String choice) {
                   return PopupMenuItem<String>(
                     value: choice,
-                    child: Text(choice, style: TextStyle(fontFamily: "monospace")),
+                    child: Text(choice, style: TextStyle(color: Colors.white, fontFamily: "monospace")),
                   );
                 }).toList();
               }
@@ -63,8 +63,8 @@ class _HomePageState extends State<HomePage> {
 
           bottom: const TabBar(
             isScrollable: true,
-            labelColor: Colors.black,
-            indicatorColor: customGreen,
+            labelColor: Colors.white,
+            indicatorColor: dropBlue,
             indicatorSize: TabBarIndicatorSize.label,
             labelStyle: TextStyle(fontWeight: FontWeight.bold, fontFamily: "monospace"),
             tabs: [
